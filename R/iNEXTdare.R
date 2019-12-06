@@ -2,11 +2,11 @@
 #'
 #' @param x A list or a data.frame.
 #' @param q a paremeter of hill numbers
-#' @export
+#' @param datatype datatype can abundance and incidence_freq
 #' @examples
 
 
-iNEXT.dare <- function(x, rho, q = 0, datatype = "abundance",
+iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
                        endpoint = NULL, knots = 40, se = TRUE, conf = 0.95,
                        nboot = 50) {
   datainf.abu <- function(data,rho){
