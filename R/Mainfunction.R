@@ -1,10 +1,28 @@
-#' A main Function
+#' Main Functions
 #'
-#' @param x A list or a data.frame.
-#' @param q a paremeter of hill numbers
-#' @param datatype datatype can abundance and incidence_freq
-#' @export
+#' \code{iNEXT_dare}: compute the rarefaction and extrapolation of diveristy.
+#' @param x a list consist of N data.frame/matrix describing species-by-assemblage/plot abundance. Note that
+#' the species in each element must exactly match including specpes order. Use \code{data(abundata)} to see data example.
+#' @param rho a numeric value of the fraction of sample size, which should be between 0 and 1.
+#' @param q a numeric value or vector specifying the diversity order of Hill number.
+#' @param datatype data type of input data: individual-based abundance data (datatype = "abundance"),
+#' sampling-unit-based incidence frequencies data (datatype = "incidence_freq")
+#' @param size an integer vector of sample sizes (number of individuals or sampling units) for which diversity estimates will be computed.
+#' If NULL, then diversity estimates will be computed for those sample sizes determined by the specified/default endpoint and knots.
+#' @param endpoint an integer specifying the sample size that is the endpoint for rarefaction/extrapolation.
+#' If NULL, then endpoint = double reference sample size.
+#' @param knots an integer specifying the number of equally-spaced knots (say K, default is 40) between size 1 and the endpoint;
+#' each knot represents a particular sample size for which diversity estimate will be calculated. If the endpoint is smaller than the reference sample size,
+#' @param se a logical variable to calculate the bootstrap standard error and conf confidence interval.
+#' @param conf a positive number < 1 specifying the level of confidence interval, default is 0.95.
+#' @param nboot an integer specifying the number of replications.
+#' @return a list consists of N elements, where N is the number of region. Each element is a list containing 5 tables of gamma. alpha and beta diversities,
+#' and 2 types of dissimialrities (Sorensen and Jaccard), respectively.
 #' @examples
+#' data(abundata)
+#' out <- iNEXT_beta(x = abundata, q = c(0,1,2), datatype = "abundance",se = TRUE)
+#' @import
+#' @export
 
 
 iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
