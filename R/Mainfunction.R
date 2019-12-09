@@ -1,6 +1,5 @@
 #' Main Functions
-#'
-#' \code{iNEXT_dare}: compute the rarefaction and extrapolation of diveristy.
+#' \code{iNEXT_dare}: compute the rarefaction and extrapolation of diveristy without.
 #' @param x a list consist of N data.frame/matrix describing species-by-assemblage/plot abundance. Note that
 #' the species in each element must exactly match including specpes order. Use \code{data(abundata)} to see data example.
 #' @param rho a numeric value of the fraction of sample size, which should be between 0 and 1.
@@ -21,7 +20,6 @@
 #' @examples
 #' data(abundata)
 #' out <- iNEXT_beta(x = abundata, q = c(0,1,2), datatype = "abundance",se = TRUE)
-#' @import
 #' @export
 
 
