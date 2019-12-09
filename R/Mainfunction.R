@@ -15,11 +15,9 @@
 #' @param se a logical variable to calculate the bootstrap standard error and conf confidence interval.
 #' @param conf a positive number < 1 specifying the level of confidence interval, default is 0.95.
 #' @param nboot an integer specifying the number of replications.
-#' @return a list consists of N elements, where N is the number of region. Each element is a list containing 5 tables of gamma. alpha and beta diversities,
-#' and 2 types of dissimialrities (Sorensen and Jaccard), respectively.
 #' @examples
-#' data(abundata)
-#' out <- iNEXT_beta(x = abundata, q = c(0,1,2), datatype = "abundance",se = TRUE)
+#' data(abudata)
+#' out <- iNEXTdare(x = abudata, q = c(0,1,2), datatype = "abundance",se = TRUE)
 #' @export
 
 

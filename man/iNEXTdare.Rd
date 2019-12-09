@@ -43,15 +43,11 @@ each knot represents a particular sample size for which diversity estimate will 
 \item{size}{an integer vector of sample sizes (number of individuals or sampling units) for which diversity estimates will be computed.
 If NULL, then diversity estimates will be computed for those sample sizes determined by the specified/default endpoint and knots.}
 }
-\value{
-a list consists of N elements, where N is the number of region. Each element is a list containing 5 tables of gamma. alpha and beta diversities,
-and 2 types of dissimialrities (Sorensen and Jaccard), respectively.
-}
 \description{
 Main Functions
 \code{iNEXT_dare}: compute the rarefaction and extrapolation of diveristy without.
 }
 \examples{
-data(abundata)
-out <- iNEXT_beta(x = abundata, q = c(0,1,2), datatype = "abundance",se = TRUE)
+data(abudata)
+out <- iNEXTdare(x = abudata, q = c(0,1,2), datatype = "abundance",se = TRUE)
 }
