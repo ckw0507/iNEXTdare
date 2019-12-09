@@ -1,0 +1,495 @@
+"Monsoon" "Upper cloud"
+"plots" 191 153
+"Abelia chinensis R. Br. var. ionandra (Hayata) Masam." 0 1
+"Abies kawakamii (Hayata) Ito" 0 2
+"Acacia confusa Merr." 8 0
+"Acer albopurpurascens Hayata" 0 1
+"Acer kawakamii Koidzumi" 8 7
+"Acer morrisonense Hayata" 3 25
+"Acer palmatum Thunb. var. pubescens Li" 0 12
+"Acer serrulatum Hayata" 29 6
+"Actinidia chinensis Planch. var. setosa Li" 1 0
+"Adinandra formosana Hayata" 69 12
+"Adinandra lasiostyla Hayata" 0 34
+"Aeschynanthus acuminatus Wall. ex A. DC." 1 0
+"Ailanthus altissima (Miller) Swingle var. tanakai (Hayata) Sasaki" 0 0
+"Akebia trifoliata (Thunb.) Koidz. subsp. australis (Diels) T. Shimizu" 0 0
+"Alangium chinense (Lour.) Rehder" 0 0
+"Albizia falcata Bacher ex Merill" 0 0
+"Aleurites fordii Hemsl." 1 0
+"Aleurites montana E. H. Wilson" 6 0
+"Alniphyllum pterospermum Matsum." 11 0
+"Alnus formosana (Burkill ex Forbes & Hemsl.) Makino" 2 15
+"Amischotolype hispida (Less. & A. Rich.) D. Y. Hong" 0 0
+"Ampelopsis brevipedunculata (Maxim.) Traut. var. hancei (Planch.) Re" 2 0
+"Ampelopsis cantoniensis (Hook. & Arn.) Planch." 1 0
+"Antidesma japonicum Sieb. & Zucc. var. acutisepalum (Hayata) Hurusaw" 4 0
+"Antidesma japonicum Sieb. & Zucc. var. densiflorum Hurusawa" 48 0
+"Antidesma pentandrum Merr. var. barbatum (Presl) Merr." 7 0
+"Aralia bipinnata Blanco" 2 0
+"Aralia decaisneana Hance" 2 1
+"Archidendron lucidum (Benth.) I. Nielsen" 50 0
+"Ardisia cornudentata Mez" 3 0
+"Ardisia cornudentata Mez subsp. morrisonensis (Hayata) Yuen P. Yang" 7 0
+"Ardisia crenata Sims" 13 2
+"Ardisia quinquegona Blume" 60 0
+"Ardisia sieboldii Miq." 133 1
+"Ardisia virens Kurz" 21 0
+"Arenga tremula (Blanco) Becc." 0 0
+"Aucuba chinensis Benth." 1 0
+"Aucuba japonica Thunb." 16 1
+"Barthea barthei (Hance) Krass" 3 34
+"Bauhinia championii (Benth.) Benth." 2 0
+"Beilschmiedia erythrophloia Hayata" 8 1
+"Benthamidia japonica (Sieb. & Zucc.) Hara var. chinensis (Osborn) Hara" 1 0
+"Berberis aristatoserrulata Hayata" 0 0
+"Berberis kawakamii Hayata" 0 0
+"Berberis mingetsuensis Hayata" 0 1
+"Bischofia javanica Bl." 1 0
+"Blastus cochinchinensis Lour." 99 0
+"Boehmeria densiflora Hook. & Arn." 1 0
+"Boehmeria wattersii (Hance) Shih & Yang" 1 0
+"Bredia gibba Ohwi" 2 0
+"Bredia oldhamii Hooker f." 1 0
+"Bretschneidera sinensis Hemsl." 6 0
+"Breynia officinalis Hemsley" 1 0
+"Bridelia balansae Tutch." 27 0
+"Broussonetia papyrifera (L.) L Herit. ex Vent." 0 0
+"Broussonetia papyrifera (L.) LHerit. ex Vent." 1 0
+"Brugmansia suaveolens (Willd.) Bercht. & Presl" 0 0
+"Buxus microphylla Sieb. & Zucc. subsp. sinica (Rehd. & Wils.) Hatusima" 3 0
+"Callicarpa dichotoma (Lour.) K. Koch" 0 0
+"Callicarpa formosana Rolfe" 31 0
+"Callicarpa randaiensis Hayata" 6 7
+"Callicarpa tikusikensis Masam." 3 0
+"Camellia brevistyla (Hayata) Coh.-Stuart" 13 8
+"Camellia caudata Wall." 0 0
+"Camellia oleifera Abel." 4 0
+"Camellia sasanqua Thunb." 0 0
+"Camellia sinensis (L.) Ktze. f. formosensis Kitam." 1 0
+"Camellia sinensis (L.) Ktze. var. assamica (Mast.) Kitam." 4 0
+"Camellia tenuifolia (Hayata) Coh-Stuart" 46 31
+"Carpinus kawakamii Hayata" 0 2
+"Carpinus rankanensis Hayata" 0 3
+"Casearia membranacea Hance" 6 0
+"Castanopsis cuspidata (Thunb. ex Murray) Schottky var. carlesii (Hemsl.) Yamazaki" 81 34
+"Castanopsis cuspidata (Thunb. ex Murray) Schottky var. carlesii (Hemsl.) Yamazaki f. sessilis (Nakai) Liao" 33 0
+"Castanopsis fabri Hance" 0 0
+"Castanopsis fargesii Fr." 0 0
+"Castanopsis kawakamii Hayata" 0 0
+"Castanopsis kusanoi Hayata" 0 0
+"Celastrus hindsii Benth." 0 0
+"Celastrus punctatus Thunb." 0 1
+"Celtis formosana Hayata" 4 0
+"Celtis sinensis Pers." 1 0
+"Cephalotaxus wilsoniana Hayata" 0 7
+"Chamaecyparis formosensis Matsum." 3 58
+"Chamaecyparis obtusa Sieb. & Zucc. var. formosana (Hayata) Rehder" 6 49
+"Cinnamomum austrosinense H. T. Chang" 4 0
+"Cinnamomum camphora (L.) Presl." 7 0
+"Cinnamomum insularimontanum Hayata" 4 2
+"Cinnamomum macrostemon Hayata" 18 1
+"Cinnamomum micranthum (Hayata) Hayata" 7 0
+"Cinnamomum osmophloeum Kanehira" 15 0
+"Cinnamomum subavenium Miq." 29 9
+"Citrus depress Hayata" 1 0
+"Citrus tachibana (Makino) Tanaka" 1 0
+"Clerodendrum cyrtophyllum Turcz." 35 0
+"Clerodendrum trichotomum Thunb." 4 1
+"Cleyera japonica Thunb." 28 38
+"Cleyera japonica Thunb. var. longicarpa (Yamamoto) Ling & Hsieh" 1 2
+"Cleyera japonica Thunb. var. morii (Yamamoto) Masam." 39 4
+"Cleyera japonica Thunb. var. taipinensis Keng" 3 51
+"Crateva adansonii DC. subsp. formosensis Jacobs" 2 0
+"Cryptocarya chinensis (Hance) Hemsl." 72 0
+"Cryptocarya concinna Hance" 9 0
+"Cryptomeria japonica (L. f.) D. Don" 1 0
+"Cunninghamia konishii Hayata" 0 8
+"Cunninghamia lanceolata (Lamb.) Hook." 0 0
+"Cyathea lepifera (J. Sm. ex Hook.) Copel." 31 0
+"Cyathea podophylla (Hook.) Copel." 34 0
+"Cyathea spinulosa Wall. ex Hook." 20 0
+"Cyclobalanopsis gilva (Bl.) Oerst." 15 2
+"Cyclobalanopsis glauca (Thunb. ex Murray) Oerst." 29 8
+"Cyclobalanopsis longinux (Hayata) Schottky" 70 38
+"Cyclobalanopsis morii (Hayata) Schottky" 0 53
+"Cyclobalanopsis pachyloma (O. Seem.) Schottky" 2 0
+"Cyclobalanopsis salicina (Bl.) Oerst." 1 0
+"Cyclobalanopsis sessilifolia (Bl.) Schottky" 45 77
+"Cyclobalanopsis stenophylloides (Hayata) Kudo & Masam. ex Kudo" 6 60
+"Cymbidium lancifolium Hook. f. var. aspidistrifolium (Fukuy.) S. S. Ying" 1 0
+"Damnacanthus angustifolius Hayata" 2 0
+"Damnacanthus indicus Gaertn." 11 0
+"Daphne arisanensis Hayata" 0 3
+"Daphne kiusiana Miq. var. atrocaulis (Rehder) Maekawa" 1 0
+"Daphniphyllum glaucescens Bl. subsp. oldhamii (Hemsl.) Huang var. oldhamii (Hemsl.) Huang" 119 6
+"Daphniphyllum himalaense (Benth.) Muell.-Arg. subsp. macropodum (Miq.) Huang" 9 45
+"Debregeasia orientalis C. J. Chen" 0 1
+"Dendrocnide meyeniana (Walp.) Chew" 0 0
+"Dendropanax dentiger (Harms ex Diels) Merr." 65 67
+"Derris laxiflora Benth." 0 0
+"Deutzia cordatula Li" 0 0
+"Deutzia pulchra Vidal" 0 1
+"Deutzia taiwanensis (Maxim.) Schneider" 0 0
+"Diospyros eriantha Champ. ex Benth." 31 0
+"Diospyros japonica Sieb. & Zucc." 0 0
+"Diospyros morrisiana Hance" 144 1
+"Diospyros oldhamii Maxim." 0 0
+"Distylium gracile Nakai" 1 0
+"Distylium racemosum Sieb. & Zucc." 1 0
+"Ecdysanthera rosea Hook. & Arn." 1 0
+"Ehretia longiflora Champ. ex Benth." 1 0
+"Elaeagnus formosana Nakai" 2 0
+"Elaeagnus glabra Thunb." 6 0
+"Elaeagnus grandifolia Hayata" 0 1
+"Elaeagnus thunbergii Serv." 11 3
+"Elaeocarpus japonicus Sieb. & Zucc." 111 48
+"Elaeocarpus sylvestris (Lour.) Poir." 71 3
+"Embelia laeta (L.) Mez" 2 0
+"Embelia lenticellata Hayata" 0 0
+"Engelhardia roxburghiana Wall." 81 4
+"Eriobotrya deflexa (Hemsl.) Nakai" 18 3
+"Euonymus carnosus Hemsl." 6 0
+"Euonymus laxiflorus Champ. ex Benth." 6 0
+"Euonymus oxyphyllus Miq." 3 0
+"Euonymus spraguei Hayata" 0 1
+"Euonymus tashiroi Maxim." 3 0
+"Eurya acuminata DC." 14 2
+"Eurya chinensis R. Br." 54 2
+"Eurya crenatifolia (Yamamoto) Kobuski" 35 32
+"Eurya glaberrima Hayata" 5 60
+"Eurya gnaphalocarpa Hayata" 6 0
+"Eurya leptophylla Hayata" 8 50
+"Eurya loquaiana Dunn" 101 87
+"Eurya nitida Korthals" 18 0
+"Eurya strigillosa Hayata" 0 17
+"Euscaphis japonica (Thunb.) Kanitz" 10 0
+"Eustigma oblongifolium Gardn. & Champ." 0 6
+"Fatsia polycarpa Hayata" 4 32
+"Ficus ampelas Burm. f." 0 0
+"Ficus erecta Thunb. var. beecheyana (Hook. & Arn.) King" 106 0
+"Ficus fistulosa Reinw. ex Bl." 52 0
+"Ficus formosana Maxim." 59 0
+"Ficus irisana Elm." 1 0
+"Ficus microcarpa L. f." 1 0
+"Ficus microcarpa L. f. var. crassifolia (Shieh) Liao" 0 0
+"Ficus nervosa Heyne ex Roth." 5 0
+"Ficus sarmentosa B. Ham. ex J. E. Sm. var. nipponica (Fr. & Sav.) Corner" 1 0
+"Ficus septica Burm. f." 3 0
+"Ficus superba (Miq.) Miq. var. japonica Miq." 2 0
+"Ficus virgata Reinw. ex Bl." 13 0
+"Firmiana simplex (L.) W. F. Wight" 1 0
+"Fissistigma glaucescens (Hance) Merr." 0 0
+"Fissistigma oldhamii (Hemsl.) Merr." 10 0
+"Fraxinus griffithii C. B. Clarke" 1 0
+"Fraxinus insularis Hemsl." 1 0
+"Gardenia jasminoides Ellis" 30 0
+"Glochidion acuminatum Muell.-Arg." 61 0
+"Glochidion philippicum (Cavan.) C. B. Rob." 4 0
+"Glochidion rubrum Bl." 48 0
+"Glochidion zeylanicum (Gaertn.) A. Juss." 6 0
+"Glochidion zeylanicum (Gaertn.) A. Juss. var. lanceolatum (Hayata) M. J. Deng & J. C. Wang" 4 0
+"Glycosmis citrifolia (Willd.) Lindl." 0 0
+"Gordonia axillaris (Roxb.) Dietr." 36 9
+"Gymnema sylvestre (Retz.) Schultes" 2 0
+"Helicia cochinchinensis Lour." 14 0
+"Helicia formosana Hemsl." 91 0
+"Helwingia japonica (Thunb.) Dietr. subsp. taiwaniana Y. P. Yang & H. Y. Liu" 0 5
+"Hibiscus syriacus L." 0 0
+"Hiptage benghalensis (L.) Kurz." 2 0
+"Hydrangea angustipetala Hayata" 81 11
+"Hydrangea aspera D. Don" 0 2
+"Hydrangea chinensis Maxim." 24 1
+"Hydrangea integrifolia Hayata ex Matsum. & Hayata" 0 0
+"Hydrangea longifolia Hayata" 0 0
+"Idesia polycarpa Maxim." 0 1
+"Ilex asprella (Hook. & Arn.) Champ." 44 1
+"Ilex bioritsensis Hayata" 0 6
+"Ilex cochinchinensis (Lour.) Loes." 1 0
+"Ilex crenata Thunb." 1 0
+"Ilex ficoidea Hemsl." 71 3
+"Ilex formosana Maxim." 89 5
+"Ilex goshiensis Hayata" 17 64
+"Ilex hayataiana Loes." 4 34
+"Ilex lonicerifolia Hayata" 0 9
+"Ilex lonicerifolia Hayata var. matsudai Yamamoto" 2 5
+"Ilex maximowicziana Loes." 41 0
+"Ilex micrococca Maxim." 4 2
+"Ilex pedunculosa Miq." 0 3
+"Ilex pubescens Hook. & Arn." 10 0
+"Ilex rotunda Thunb." 13 1
+"Ilex sugerokii Maxim. var. brevipedunculata (Maxim.) S. Y. Hu" 2 17
+"Ilex suzukii S. Y. Hu" 0 4
+"Ilex tugitakayamensis Sasaki" 0 63
+"Ilex uraiensis Mori & Yamamoto" 8 2
+"Ilex yunnanensis Fr. var. parvifolia (Hayata) S. Y. Hu" 0 1
+"Illicium anisatum L." 2 41
+"Illicium arborescens Hayata" 9 0
+"Itea oldhamii Schneider" 46 0
+"Itea parviflora Hemsl." 92 17
+"Juglans cathayensis Dode" 0 0
+"Kadsura japonica (L.) Dunal" 5 3
+"Lagerstroemia subcostata Koehne" 26 0
+"Lasianthus appressihirtus Simizu" 0 0
+"Lasianthus appressihirtus Simizu var. maximus Simizu ex T.S. Liu & J.M. Chao" 1 0
+"Lasianthus bunzanensis Simizu" 21 0
+"Lasianthus chinensis (Champ. ex Benth.) Benth." 0 0
+"Lasianthus curtisii King & Gamble" 12 0
+"Lasianthus fordii Hance" 101 2
+"Lasianthus japonicus Miq." 1 1
+"Lasianthus microphyllus Elmer" 1 0
+"Lasianthus microstachys Hayata" 5 1
+"Lasianthus obliquinervis Merr." 20 0
+"Lasianthus wallichii Wight" 43 0
+"Leucaena leucocephala (Lam.) de Wit" 0 0
+"Ligustrum liukiuense Koidz." 37 9
+"Ligustrum morrisonense Kanehira & Sasaki" 0 1
+"Ligustrum pricei Hayata" 0 4
+"Ligustrum sinense Lour. ex Dence" 11 4
+"Limlia uraiana (Hayata) Masam. & Tomiya" 16 0
+"Lindera akoensis Hayata" 5 0
+"Lindera communis Hemsl." 26 1
+"Lindera erythrocarpa Makino" 0 1
+"Lindera megaphylla Hemsl." 4 0
+"Liquidambar formosana Hance" 2 0
+"Lithocarpus lepidocarpus (Hayata) Hayata" 3 0
+"Litsea acuminata (Bl.) Kurata" 113 28
+"Litsea acutivena Hayata" 2 0
+"Litsea akoensis Hayata" 0 1
+"Litsea coreana L?vl." 7 0
+"Litsea cubeba (Lour.) Persoon" 3 9
+"Litsea elongata (Wall. ex Nees) Benth. & Hook. f. var. mushaensis (Hayata) J. C. Liao" 13 38
+"Litsea hypophaea Hayata" 33 1
+"Litsea morrisonensis Hayata" 2 13
+"Litsea perrottetii (Bl.) F.-Vill." 0 1
+"Lonicera acuminata Wall." 0 0
+"Lyonia ovalifolia (Wall.) Drude" 3 25
+"Macaranga tanarius (L.) Muell.-Arg." 0 0
+"Machilus japonica Sieb. & Zucc." 19 13
+"Machilus japonica Sieb. & Zucc. var. kusanoi (Hayata) Liao" 47 0
+"Machilus thunbergii Sieb. & Zucc." 185 24
+"Machilus zuihoensis Hayata" 59 2
+"Machilus zuihoensis Hayata var. mushaensis (Lu) Y. C. Liu" 5 0
+"Maclura cochinchinensis (Lour.) Corner" 1 12
+"Maesa japonica (Thunb.) Moritzi ex Zoll." 39 1
+"Maesa perlaria (Lour.) Merr. var. formosana (Mez) Yuen P. Yang" 64 0
+"Mahonia japonica (Thunb. ex Murray) DC." 1 0
+"Mahonia oiwakensis Hayata" 0 2
+"Mallotus japonicus (Thunb.) Muell.-Arg." 42 1
+"Mallotus paniculatus (Lam.) Muell.-Arg." 49 0
+"Mallotus philippensis (Lam.) Muell.-Arg." 2 0
+"Malus doumeri (Bois.) Chev. C. R. Ac. Sc." 1 23
+"Melanolepis multiglandulosa (Reinw.) Reich. f. & Zoll." 0 0
+"Melastoma candidum D. Don" 23 0
+"Melicope pteleifolia (Champ. ex Benth.) T. Hartley" 1 0
+"Melicope semecarpifolia (Merr.) T. Hartley" 5 0
+"Meliosma rhoifolia Maxim." 6 0
+"Meliosma rigida Sieb. & Zucc." 26 0
+"Meliosma squamulata Hance" 68 0
+"Michelia compressa (Maxim.) Sargent" 116 41
+"Microlepia marginata (Panzer) C. Chr. var. bipinnata Makino" 1 0
+"Microtropis fokienensis Dunn" 1 63
+"Microtropis japonica (Fr. & Sav.) Hall. f." 2 0
+"Miscanthus floridulus (Labill.) Warb. ex K. Schum. & Lauterb." 1 0
+"Morus australis Poir." 11 0
+"Mucuna macrocarpa Wall." 2 0
+"Murraya paniculata (L.) Jack." 0 0
+"Musa basjoo Siebold var. formosana (Warb.) S. S.Ying" 1 0
+"Mussaenda pubescens Ait. f." 3 0
+"Myrica rubra (Lour.) Sieb. & Zucc." 38 2
+"Myrsine seguinii H. L?vl." 108 2
+"Nageia fleuryi (Hickel) de Laub." 4 0
+"Nageia nagi (Thunb.) O. Ktze." 10 0
+"Neolitsea aciculata (Bl.) Koidz." 0 5
+"Neolitsea aciculata (Bl.) Koidz. var. variabillima (Hayata) J. C. Li" 24 16
+"Neolitsea acuminatissima (Hayata) Kanehira & Sasaki" 8 143
+"Neolitsea konishii (Hayata) Kanehira & Sasaki" 10 1
+"Neolitsea parvigemma (Hayata) Kanehira & Sasaki" 2 0
+"Neolitsea sericea (Bl.) Koidz." 2 1
+"Oreocnide pedunculata (Shirai) Masam." 44 0
+"Osmanthus enervius Masam. & Mori" 0 3
+"Osmanthus heterophyllus (G. Don) P. S. Green" 1 10
+"Osmanthus lanceolatus Hayata" 0 10
+"Osmanthus marginatus (Champ. ex Benth.) Hemsl." 6 1
+"Osmanthus matsumuranus Hayata" 55 3
+"Pachycentria formosana Hayata" 0 1
+"Pasania cornea (Lour.) Liao" 0 1
+"Pasania glabra (Thunb. ex Murray) Oerst." 5 0
+"Pasania hancei (Benth.) Schottky var. ternaticupula (Hayata) Liao" 13 16
+"Pasania hancei (Benth.) Schottky var. ternaticupula (Hayata) Liao f. subreticulata (Hayata) Liao" 8 12
+"Pasania harlandii (Hance) Oerst." 47 6
+"Pasania kawakamii (Hayata) Schottky" 8 22
+"Pasania konishii (Hayata) Schottky" 14 1
+"Pasania synbalanos (Hance) Schottky" 5 1
+"Pasania taitoensis (Hayata) Liao" 1 0
+"Perrottetia arisanensis Hayata" 5 2
+"Phellodendron amurense Rupr. var. wilsonii (Hayata & Kanehira) Chang" 0 1
+"Phoebe formosana (Hayata) Hayata" 1 0
+"Photinia niitakayamensis Hayata" 0 26
+"Photinia serratifolia (Desf.) Kalkman" 0 1
+"Phyllanthus oligospermus Hayata" 0 2
+"Picea morrisonicola Hayata" 0 4
+"Pieris taiwanensis Hayata" 4 7
+"Pilea aquarum Dunn subsp. brevicornuta (Hayata) C. J. Chen" 1 0
+"Pileostegia viburnoides Hook. f. & Thoms." 0 0
+"Pinus armandii Franchet var. masteriana Hayata" 0 17
+"Pinus morrisonicola Hayata" 0 1
+"Pinus taiwanensis Hayata" 1 13
+"Piper sintenense Hatusima" 1 0
+"Pistacia chinensis Bunge" 0 0
+"Pittosporum daphniphylloides Hayata" 1 1
+"Pittosporum illicioides Makino" 0 12
+"Pittosporum pentandrum (Blanco) Merr." 0 0
+"Platycarya strobilacea Sieb. & Zucc." 0 0
+"Podocarpus fasciculus de Laubenfels" 0 1
+"Pourthiaea beauverdiana (Schneider) Hatusima var. notabilis (Rehder & Wilson) Hatusima" 18 10
+"Pourthiaea lucida Decaisne" 18 3
+"Pourthiaea villosa (Thunb. ex Murray) Decne. var. parvifolia (Pritz.) Iketani & Ohashi" 19 3
+"Premna microphylla Turcz." 7 0
+"Prunus buergeriana Miq." 0 4
+"Prunus campanulata Maxim." 10 15
+"Prunus matuurai Sasaki" 1 3
+"Prunus phaeosticta (Hance) Maxim." 138 46
+"Prunus phaeosticta (Hance) Maxim. var. ilicifolia Yamam." 0 2
+"Prunus spinulosa Sieb et Zucc." 0 8
+"Prunus taiwaniana Hayata" 0 4
+"Prunus takasagomontana Sasaki" 0 1
+"Prunus transarisanensis Hayata" 0 5
+"Prunus zippeliana Miq." 0 0
+"Pseudotsuga wilsoniana Hayata" 0 5
+"Psychotria rubra (Lour.) Poir." 95 0
+"Pueraria lobata (Willd.) Ohwi subsp. thomsonii (Benth.) Ohashi & Tateishi" 0 0
+"Pyrenaria shinkoensis (Hayata) Keng" 72 6
+"Quercus spinosa A. David ex Fr." 0 4
+"Quercus tatakaensis Tomiya" 0 3
+"Radermachia sinica (Hance) Hemsl." 2 0
+"Randia canthioides Champ. ex Benth." 0 0
+"Randia cochinchinensis (Lour.) Merr." 77 0
+"Rhamnus crenata Sieb. & Zucc." 0 2
+"Rhamnus formosana Matsum." 0 1
+"Rhamnus nakaharae (Hayata) Hayata" 1 0
+"Rhamnus pilushanensis Liu & Wang" 0 4
+"Rhaphiolepis indica (L.) Lindl. ex Ker var. tashiroi Hayata ex Matsum. & Hayata" 0 3
+"Rhaphiolepis indica (L.) Lindl. ex Ker var. umbellata (Thunb. ex Murray) Ohashi" 1 0
+"Rhododendron breviperulatum Hayata" 0 0
+"Rhododendron chilanshanense Kurashige" 0 2
+"Rhododendron formosanum Hemsl." 2 41
+"Rhododendron kawakamii Hayata" 0 0
+"Rhododendron leptosanthum Hayata" 33 83
+"Rhododendron mariesii Hemsl. & Wilson" 1 0
+"Rhododendron noriakianum T. Suzuki" 0 1
+"Rhododendron oldhamii Maxim." 9 1
+"Rhododendron pachysanthum Hayata" 0 3
+"Rhododendron pseudochrysanthum Hayata" 1 7
+"Rhododendron rubropilosum Hayata" 0 10
+"Rhus javanica L. var. roxburghiana (DC.) Rehd. & Willson" 0 0
+"Rhus succedanea L." 12 1
+"Rubus formosensis Ktze." 0 0
+"Rubus kawakamii Hayata" 0 1
+"Rubus mesogaeus Focke" 1 0
+"Sabia swinhoei Hemsl." 1 0
+"Sabia transarisanensis Hayata" 0 0
+"Sageretia thea (Osbeck) Johnst." 0 0
+"Salix warburgii O. Seemen" 0 0
+"Sapindus mukorossii Gaertn." 0 0
+"Sapium discolor Muell.-Arg." 3 0
+"Sapium sebiferum (L.) Roxb." 2 0
+"Sarcandra glabra (Thunb.) Nakai" 11 0
+"Sassafras randaiense (Hayata) Rehder" 0 3
+"Saurauia tristyla DC. var. oldhamii (Hemsl.) Finet & Gagncp." 29 0
+"Schefflera arboricola (Hayata) Kanehira" 0 0
+"Schefflera octophylla (Lour.) Harms" 157 0
+"Schefflera odorata (Blanco) Merr. & Rolfe" 4 0
+"Schefflera taiwaniana (Nakai) Kanehira" 1 23
+"Schima superba Gard. & Champ." 1 16
+"Schizophragma integrifolium Oliv. var. fauriei (Hayata) Hayata" 0 1
+"Schoepfia jasminodora Sieb. & Zucc." 0 1
+"Scolopia oldhamii Hance" 0 0
+"Sinoadina racemosa (Siebold & Zucc.) Ridsdale" 18 0
+"Sinopanax formosana (Hayata) Li" 0 4
+"Skimmia arisanensis Hayata" 0 5
+"Skimmia reevesiana Fortune" 1 37
+"Sloanea formosana Li" 33 0
+"Smilax china L." 1 0
+"Smilax lanceifolia Roxb." 1 0
+"Smilax menispermoidea A. DC." 1 0
+"Sorbus randaiensis (Hayata) Koidz." 0 3
+"Stachyurus himalaicus Hook. f. & Thomson ex Benth." 0 5
+"Stauntonia obovatifoliola Hayata" 1 2
+"Stephanandra incisa (Thunb. ex Murray) Zabel" 0 0
+"Styrax formosana Matsum." 47 4
+"Styrax suberifolia Hook. & Arn." 33 0
+"Swida controversa (Hemsl.) Soj?k" 0 1
+"Swida controversa (Hemsl.) Sojak" 0 0
+"Swida macrophylla (Wall.) Soj?k" 1 1
+"Sycopsis sinensis Oliver" 1 39
+"Symplocos arisanensis Hayata" 7 49
+"Symplocos caudata Wall." 39 8
+"Symplocos chinensis (Lour.) Druce" 6 0
+"Symplocos congesta Benth." 1 4
+"Symplocos eriostroma Hayata" 3 0
+"Symplocos formosana Brand" 3 13
+"Symplocos glauca (Thunb.) Koidz." 45 4
+"Symplocos grandis Hand.-Mazz." 0 0
+"Symplocos heishanensis Hayata" 2 40
+"Symplocos konishii Hayata" 38 0
+"Symplocos migoi Nagam." 17 55
+"Symplocos modesta Brand" 5 1
+"Symplocos morrisonicola Hayata" 1 95
+"Symplocos sasakii Hayata" 4 5
+"Symplocos setchuensis Brand" 4 4
+"Symplocos sonoharae Koidz." 1 6
+"Symplocos stellaris Brand" 2 37
+"Symplocos theophrastifolia Sieb. & Zucc." 45 0
+"Symplocos wikstroemiifolia Hayata" 18 22
+"Syzygium buxifolium Hook. & Arn." 59 4
+"Syzygium formosanum (Hayata) Mori" 15 0
+"Syzygium jambas (L.) Alston" 3 0
+"Taiwania cryptomerioides Hayata" 0 12
+"Tarenna gracilipes (Hayata) Ohwi" 0 0
+"Taxus sumatrana (Miq.) de Laub." 0 7
+"Ternstroemia gymnanthera (Wight & Arn.) Sprague" 16 71
+"Tetradium glabrifolium (Champ. ex Benth.) T. Hartley" 9 2
+"Tetradium ruticarpum (A. Juss.) T. Hartley" 0 0
+"Tetrapanax papyriferus (Hook.) K. Koch" 0 0
+"Tetrastigma formosanum (Hemsl.) Gagnep." 1 0
+"Toddalia asiatica (L.) Lam." 0 1
+"Trachelospermum formosanum Liu & Ou" 0 0
+"Trema orientalis (L.) Bl." 0 0
+"Tricalysia dubia (Lindl.) Ohwi" 65 0
+"Trochodendron aralioides Sieb. & Zucc." 18 102
+"Tsuga chinensis (Franchet) Pritz. ex Diels var. formosana (Hayata) Li & Keng" 0 90
+"Turpinia formosana Nakai" 62 0
+"Turpinia ternata Nakai" 13 0
+"Ulmus uyematsui Hayata" 0 2
+"Vaccinium bracteatum Thunb." 4 9
+"Vaccinium dunalianum Wight var. caudatifolium (Hayata) H. L. Li" 1 3
+"Vaccinium japonicum Miq. var. lasiostemon Hayata" 0 4
+"Vaccinium kengii C. E. Chang" 0 10
+"Vaccinium randaiense Hayata" 2 1
+"Vaccinium wrightii Gray" 6 10
+"Vaccinium wrightii Gray var. formosanum (Hayata) H. L. Li" 0 0
+"Ventilago leiocarpa Benth." 1 0
+"Viburnum aboricolum Hayata" 0 0
+"Viburnum arboricolum Hayata" 0 5
+"Viburnum betulifolium Batal." 0 1
+"Viburnum erosum Batal." 0 4
+"Viburnum foetidum Wall. var. rectangulatum (Graebn.) Rehder" 9 27
+"Viburnum formosanum Hayata" 45 2
+"Viburnum integrifolium Hayata" 1 9
+"Viburnum luzonicum Rolfe" 26 5
+"Viburnum odoratissimum Ker" 0 2
+"Viburnum parvifolium Hayata" 0 1
+"Viburnum plicatum Thunb. var. formosanum Y. C. Liu & C. H. Ou" 0 1
+"Viburnum propinquum Hemsl." 0 1
+"Viburnum sympodiale Graebner" 0 23
+"Viburnum taitoense Hayata" 0 5
+"Viburnum urceolatum Sieb. et Zucc." 0 24
+"Vitex negundo L." 0 0
+"Vitex quinata (Lour.) F. N. Williams" 1 0
+"Wendlandia formosana Cowan" 108 0
+"Xylosma congesta (Lour.) Merr." 0 0
+"Zanthoxylum ailanthoides Sieb. & Zucc." 0 0
+"Zanthoxylum armatum DC." 1 0
+"Zanthoxylum scandens Bl." 0 1
+"Zelkova serrata (Thunb.) Makino" 0 0
