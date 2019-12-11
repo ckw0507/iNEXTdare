@@ -728,7 +728,7 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
 }
 
 
-ggiNEXT <- function(x, type=1, se=TRUE, facet.var="none", color.var="site", grey=FALSE){
+ggiNEXT_dare <- function(x, type=1, se=TRUE, facet.var="order", color.var="site", grey=FALSE){
   TYPE <-  c(1, 2, 3)
   SPLIT <- c("none", "order", "site", "both")
   if(is.na(pmatch(type, TYPE)) | pmatch(type, TYPE) == -1)
@@ -869,3 +869,38 @@ ggiNEXT <- function(x, type=1, se=TRUE, facet.var="none", color.var="site", grey
   return(g)
 
 }
+
+##########
+
+
+x <- x$iNextEst
+Site <- names(x)
+out <- c()
+for (i in 1:length(x)) {
+  temp <- x[[i]]
+  out <- rbind(out,data.frame(Site = Site[i],temp))
+}
+names(out)
+out.sub <- out[which(out$method=="observed"),]
+out$method[out$method=="observed"]="interpolated"
+out$lty <- out$lty <- factor(out$method, levels=unique(c("interpolated", "extrapolated"),
+                                                       c("interpolation", "interpolation", "extrapolation")))
+
+#### type 1
+ggplot(out,aes(x = n,y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
+  geom_ribbon(aes(ymin = qD.LCL,ymax = qD.UCL,fill = Site),linetype = 0,alpha = 0.2) +
+  geom_point(aes(shape=Site), size=5, data=out.sub) +
+  facet_wrap(~order) + theme(legend.position = "bottom",
+                             legend.title=element_blank(),
+                             text=element_text(size=18),
+                             legend.key.width = unit(1.2,"cm"))
+
+#### type 3
+ggplot(out,aes(x = SC, y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
+  geom_ribbon(aes(ymin = qD.LCL,ymax = qD.UCL, fill = Site),linetype = 0,alpha = 0.2) +
+  geom_point(aes(shape=Site), size=5, data=out.sub) +
+  facet_wrap(~order) + theme(legend.position = "bottom",
+                             legend.title=element_blank(),
+                             text=element_text(size=18),
+                             legend.key.width = unit(1.2,"cm"))
+
