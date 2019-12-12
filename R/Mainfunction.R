@@ -461,7 +461,7 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
         })
       }
       names(est) <- Site
-      out$iNextEst <- est
+
     } else if (se == T) {
       if (is.null(endpoint) == 1) {
         est <- lapply(1:length(x),function(z){
