@@ -536,7 +536,6 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
         })
       }
       names(est) <- Site
-
     }
     asy <- c()
     for (i in 1:length(x)) {
@@ -558,11 +557,10 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
         c(S.hat.inc(da,rho),exp(entropy.inc(da,rho)),simp.inc(da,rho))
       })
       temp[,5] <- round(c(sd(se[1,]),sd(se[2,]),sd(se[3,])),3)
-      temp[,6] <- temp[,4] - qnorm(0.5+conf/2)*temp[,5]
-      temp[,7] <- temp[,4] + qnorm(0.5+conf/2)*temp[,5]
+      temp[,6] <- temp[,4] - CI*temp[,5]
+      temp[,7] <- temp[,4] + CI*temp[,5]
       asy <- rbind(asy,temp)
     }
-    out <- list("DateInfo" = DataInfo, "iNextEst" = est, "AsyEst" = asy)
 
   }
   if (datatype == "abundance") {
@@ -722,8 +720,9 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
       temp[,7] <- temp[,4] + CI*temp[,5]
       asy <- rbind(asy,temp)
     }
-    out <- list("DataInfo" = DataInfo, "iNextEst" = est, "AsyEst" = asy)
+
   }
+  out <- list("DataInfo" = DataInfo, "iNextEst" = est, "AsyEst" = asy)
   return(out)
 }
 
@@ -803,7 +802,7 @@ ggiNEXT_dare <- function(x, type=1, se=TRUE, facet.var="order", color.var="site"
       if (se == T) {
         g <- ggplot(p,aes(x = n,y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
         geom_ribbon(aes(ymin = qD.LCL,ymax = qD.UCL,fill = Site),linetype = 0,alpha = 0.2) +
-        geom_point(aes(shape=Site), size=5, data=out.sub) + ylab("Diversity") + xlab("Number of individuals") +
+        geom_point(aes(shape=Site), size=5, data=p.sub) + ylab("Diversity") + xlab("Number of individuals") +
         facet_wrap(~order) + theme(legend.position = "bottom",
                                    legend.title=element_blank(),
                                    text=element_text(size=18),
@@ -811,7 +810,7 @@ ggiNEXT_dare <- function(x, type=1, se=TRUE, facet.var="order", color.var="site"
         }
       if (se == F) {
         g <- ggplot(p,aes(x = n,y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
-          geom_point(aes(shape=Site), size=5, data=out.sub) + ylab("Diversity") + xlab("Number of individuals") +
+          geom_point(aes(shape=Site), size=5, data=p.sub) + ylab("Diversity") + xlab("Number of individuals") +
           facet_wrap(~order) + theme(legend.position = "bottom",
                                      legend.title=element_blank(),
                                      text=element_text(size=18),
@@ -823,7 +822,7 @@ ggiNEXT_dare <- function(x, type=1, se=TRUE, facet.var="order", color.var="site"
       if (se == T) {
         g <- ggplot(p,aes(x = t,y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
         geom_ribbon(aes(ymin = qD.LCL,ymax = qD.UCL,fill = Site),linetype = 0,alpha = 0.2) +
-        geom_point(aes(shape=Site), size=5, data=out.sub) + ylab("Diversity")  + xlab("Number of sampling units") +
+        geom_point(aes(shape=Site), size=5, data=p.sub) + ylab("Diversity")  + xlab("Number of sampling units") +
         facet_wrap(~order) + theme(legend.position = "bottom",
                                    legend.title=element_blank(),
                                    text=element_text(size=18),
@@ -831,7 +830,7 @@ ggiNEXT_dare <- function(x, type=1, se=TRUE, facet.var="order", color.var="site"
       }
       if (se == F) {
         g <- ggplot(p,aes(x = t,y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
-          geom_point(aes(shape=Site), size=5, data=out.sub) + ylab("Diversity")  + xlab("Number of sampling units") +
+          geom_point(aes(shape=Site), size=5, data=p.sub) + ylab("Diversity")  + xlab("Number of sampling units") +
           facet_wrap(~order) + theme(legend.position = "bottom",
                                      legend.title=element_blank(),
                                      text=element_text(size=18),
@@ -843,7 +842,7 @@ ggiNEXT_dare <- function(x, type=1, se=TRUE, facet.var="order", color.var="site"
     if (se == T) {
         g <- ggplot(p,aes(x = SC, y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
           geom_ribbon(aes(ymin = qD.LCL,ymax = qD.UCL, fill = Site),linetype = 0,alpha = 0.2) +
-          geom_point(aes(shape=Site), size=5, data=p.sub) + xlab("Sample coverage") + ylab("Diversity")
+          geom_point(aes(shape=Site), size=5, data=p.sub) + xlab("Sample coverage") + ylab("Diversity") +
         facet_wrap(~order) + theme(legend.position = "bottom",
                                    legend.title=element_blank(),
                                    text=element_text(size=18),
@@ -851,12 +850,13 @@ ggiNEXT_dare <- function(x, type=1, se=TRUE, facet.var="order", color.var="site"
     }
     if (se == F) {
       g <- ggplot(p,aes(x = SC, y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
-        geom_point(aes(shape=Site), size=5, data=p.sub) + xlab("Sample coverage") + ylab("Diversity")
+        geom_point(aes(shape=Site), size=5, data=p.sub) + xlab("Sample coverage") + ylab("Diversity") +
       facet_wrap(~order) + theme(legend.position = "bottom",
                                  legend.title=element_blank(),
                                  text=element_text(size=18),
                                  legend.key.width = unit(1.2,"cm"))
     }
   }
+  return(g)
 }
 
