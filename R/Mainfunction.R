@@ -613,7 +613,7 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
         })
       }
       names(est) <- Site
-      out$iNextEst <- est
+
     } else if (se == T) {
 
       if (is.null(endpoint) == 1) {
@@ -838,6 +838,48 @@ ggiNEXT_dare <- function(x, type=1, se=TRUE, facet.var="order", color.var="site"
       }
     }
   }
+  if (type == 2) {
+    if (sum(names(p) == "n") == 1) {
+      if (se == T) {
+        g <- ggplot(p,aes(x = n,y = SC,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
+          geom_ribbon(aes(ymin = SC.LCL,ymax = SC.UCL,fill = Site),linetype = 0,alpha = 0.2) +
+          geom_point(aes(shape=Site), size=5, data=p.sub) + ylab("Sample coverage") + xlab("Number of individuals") +
+          facet_wrap(~order) + theme(legend.position = "bottom",
+                                     legend.title=element_blank(),
+                                     text=element_text(size=18),
+                                     legend.key.width = unit(1.2,"cm"))
+      }
+      if (se == F) {
+        g <- ggplot(p,aes(x = n,y = SC,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
+          geom_point(aes(shape=Site), size=5, data=p.sub) + ylab("Sample coverage") + xlab("Number of individuals") +
+          facet_wrap(~order) + theme(legend.position = "bottom",
+                                     legend.title=element_blank(),
+                                     text=element_text(size=18),
+                                     legend.key.width = unit(1.2,"cm"))
+      }
+    }
+
+    if (sum(names(p) == "t") == 1) {
+      if (se == T) {
+        g <- ggplot(p,aes(x = t,y = SC,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
+          geom_ribbon(aes(ymin = SC.LCL,ymax = SC.UCL,fill = Site),linetype = 0,alpha = 0.2) +
+          geom_point(aes(shape=Site), size=5, data=p.sub) + ylab("Sample coverage")  + xlab("Number of sampling units") +
+          facet_wrap(~order) + theme(legend.position = "bottom",
+                                     legend.title=element_blank(),
+                                     text=element_text(size=18),
+                                     legend.key.width = unit(1.2,"cm"))
+      }
+      if (se == F) {
+        g <- ggplot(p,aes(x = t,y = SC,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
+          geom_point(aes(shape=Site), size=5, data=p.sub) + ylab("Sample coverage")  + xlab("Number of sampling units") +
+          facet_wrap(~order) + theme(legend.position = "bottom",
+                                     legend.title=element_blank(),
+                                     text=element_text(size=18),
+                                     legend.key.width = unit(1.2,"cm"))
+      }
+    }
+  }
+
   if (type == 3) {
     if (se == T) {
         g <- ggplot(p,aes(x = SC, y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
