@@ -792,7 +792,7 @@ ggiNEXT_dare <- function(x, type=1, se=TRUE, facet.var="order", color.var="site"
   p <- c()
   for (i in 1:length(x)) {
     temp <- x[[i]]
-    p <- rbind(out,data.frame(Site = Site[i],temp))
+    p <- rbind(p,data.frame(Site = Site[i],temp))
   }
   p.sub <- p[which(p$method=="observed"),]
   p$method[p$method=="observed"]="interpolated"
