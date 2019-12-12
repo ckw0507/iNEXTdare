@@ -728,7 +728,51 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
 }
 
 
-ggiNEXT_dare <- function(x, type=1, se=TRUE, facet.var="order", color.var="site", grey=FALSE){
+###############################################
+#' ggplot2 extension for an iNEXT object
+#'
+#' \code{ggiNEXT}: the \code{\link[ggplot2]{ggplot}} extension for \code{\link{iNEXT}} Object to plot sample-size- and coverage-based rarefaction/extrapolation curves along with a bridging sample completeness curve
+#' @param x an \code{iNEXT} object computed by \code{\link{iNEXT}}.
+#' @param type three types of plots: sample-size-based rarefaction/extrapolation curve (\code{type = 1});
+#' sample completeness curve (\code{type = 2}); coverage-based rarefaction/extrapolation curve (\code{type = 3}).
+#' @param se a logical variable to display confidence interval around the estimated sampling curve.
+#' @param facet.var create a separate plot for each value of a specified variable:
+#'  no separation \cr (\code{facet.var="none"});
+#'  a separate plot for each diversity order (\code{facet.var="order"});
+#'  a separate plot for each site (\code{facet.var="site"});
+#'  a separate plot for each combination of order x site (\code{facet.var="both"}).
+#' @param color.var create curves in different colors for values of a specified variable:
+#'  all curves are in the same color (\code{color.var="none"});
+#'  use different colors for diversity orders (\code{color.var="order"});
+#'  use different colors for sites (\code{color.var="site"});
+#'  use different colors for combinations of order x site (\code{color.var="both"}).
+#' @param grey a logical variable to display grey and white ggplot2 theme.
+#' @param ... other arguments passed on to methods. Not currently used.
+#' @return a ggplot2 object
+#' @examples
+#' data(spider)
+#' # single-assemblage abundance data
+#' out1 <- iNEXT(spider$Girdled, q=0, datatype="abundance")
+#' ggiNEXT(x=out1, type=1)
+#' ggiNEXT(x=out1, type=2)
+#' ggiNEXT(x=out1, type=3)
+#'
+#'\dontrun{
+#' # single-assemblage incidence data with three orders q
+#' data(ant)
+#' size <- round(seq(10, 500, length.out=20))
+#' y <- iNEXT(ant$h500m, q=c(0,1,2), datatype="incidence_freq", size=size, se=FALSE)
+#' ggiNEXT(y, se=FALSE, color.var="order")
+#'
+#' # multiple-assemblage abundance data with three orders q
+#' z <- iNEXT(spider, q=c(0,1,2), datatype="abundance")
+#' ggiNEXT(z, facet.var="site", color.var="order")
+#' ggiNEXT(z, facet.var="both", color.var="both")
+#'}
+#' @export
+#'
+
+ggiNEXT_dare <- function(x, type=1, se=TRUE, facet.var="order", color.var="site") {
   TYPE <-  c(1, 2, 3)
   SPLIT <- c("none", "order", "site", "both")
   if(is.na(pmatch(type, TYPE)) | pmatch(type, TYPE) == -1)
@@ -743,164 +787,76 @@ ggiNEXT_dare <- function(x, type=1, se=TRUE, facet.var="order", color.var="site"
   color.var <- match.arg(color.var, SPLIT)
   if(facet.var=="order") color.var <- "site"
   if(facet.var=="site") color.var <- "order"
-
-  options(warn = -1)
-  z <- fortify(x, type=type)
-  options(warn = 0)
-  if(ncol(z) ==7) {se <- FALSE}
-  datatype <- unique(z$datatype)
-  if(color.var=="none"){
-    if(levels(factor(z$order))>1 & "site"%in%names(z)){
-      warning("invalid color.var setting, the iNEXT object consists multiple sites and orders, change setting as both")
-      color.var <- "both"
-      z$col <- z$shape <- paste(z$site, z$order, sep="-")
-
-    }else if("site"%in%names(z)){
-      warning("invalid color.var setting, the iNEXT object consists multiple orders, change setting as order")
-      color.var <- "site"
-      z$col <- z$shape <- z$site
-    }else if(levels(factor(z$order))>1){
-      warning("invalid color.var setting, the iNEXT object consists multiple sites, change setting as site")
-      color.var <- "order"
-      z$col <- z$shape <- factor(z$order)
-    }else{
-      z$col <- z$shape <- rep(1, nrow(z))
+  x <- x$iNextEst
+  Site <- names(x)
+  p <- c()
+  for (i in 1:length(x)) {
+    temp <- x[[i]]
+    p <- rbind(out,data.frame(Site = Site[i],temp))
+  }
+  p.sub <- p[which(p$method=="observed"),]
+  p$method[p$method=="observed"]="interpolated"
+  p$lty <- p$lty <- factor(p$method, levels=unique(c("interpolated", "extrapolated"),
+                                                         c("interpolation", "interpolation", "extrapolation")))
+  if (type == 1) {
+    if (sum(names(p) == "n") == 1) {
+      if (se == T) {
+        g <- ggplot(p,aes(x = n,y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
+        geom_ribbon(aes(ymin = qD.LCL,ymax = qD.UCL,fill = Site),linetype = 0,alpha = 0.2) +
+        geom_point(aes(shape=Site), size=5, data=out.sub) + ylab("Diversity") + xlab("Number of individuals") +
+        facet_wrap(~order) + theme(legend.position = "bottom",
+                                   legend.title=element_blank(),
+                                   text=element_text(size=18),
+                                   legend.key.width = unit(1.2,"cm"))
+        }
+      if (se == F) {
+        g <- ggplot(p,aes(x = n,y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
+          geom_point(aes(shape=Site), size=5, data=out.sub) + ylab("Diversity") + xlab("Number of individuals") +
+          facet_wrap(~order) + theme(legend.position = "bottom",
+                                     legend.title=element_blank(),
+                                     text=element_text(size=18),
+                                     legend.key.width = unit(1.2,"cm"))
+      }
     }
-  }else if(color.var=="order"){
-    z$col <- z$shape <- factor(z$order)
-  }else if(color.var=="site"){
-    if(!"site"%in%names(z)){
-      warning("invalid color.var setting, the iNEXT object do not consist multiple sites, change setting as order")
-      z$col <- z$shape <- factor(z$order)
-    }
-    z$col <- z$shape <- z$site
-  }else if(color.var=="both"){
-    if(!"site"%in%names(z)){
-      warning("invalid color.var setting, the iNEXT object do not consist multiple sites, change setting as order")
-      z$col <- z$shape <- factor(z$order)
-    }
-    z$col <- z$shape <- paste(z$site, z$order, sep="-")
-  }
-  zz=z
-  z$method[z$method=="observed"]="interpolated"
-  z$lty <- z$lty <- factor(z$method, levels=unique(c("interpolated", "extrapolated"),
-                                                   c("interpolation", "interpolation", "extrapolation")))
-  z$col <- factor(z$col)
-  data.sub <- zz[which(zz$method=="observed"),]
 
-  g <- ggplot(z, aes_string(x="x", y="y", colour="col")) +
-    geom_point(aes_string(shape="shape"), size=5, data=data.sub)
-
-
-  g <- g + geom_line(aes_string(linetype="lty"), lwd=1.5) +
-    guides(linetype=guide_legend(title="Method"),
-           colour=guide_legend(title="Guides"),
-           fill=guide_legend(title="Guides"),
-           shape=guide_legend(title="Guides")) +
-    theme(legend.position = "bottom",
-          legend.title=element_blank(),
-          text=element_text(size=18),
-          legend.key.width = unit(1.2,"cm"))
-
-  if(type==2L) {
-    g <- g + labs(x="Number of sampling units", y="Sample coverage")
-    if(datatype=="abundance") g <- g + labs(x="Number of individuals", y="Sample coverage")
-  }
-  else if(type==3L) {
-    g <- g + labs(x="Sample coverage", y="Species diversity")
-  }
-  else {
-    g <- g + labs(x="Number of sampling units", y="Species diversity")
-    if(datatype=="abundance") g <- g + labs(x="Number of individuals", y="Species diversity")
-  }
-
-  if(se)
-    g <- g + geom_ribbon(aes_string(ymin="y.lwr", ymax="y.upr", fill="factor(col)", colour="NULL"), alpha=0.2)
-
-
-  if(facet.var=="order"){
-    if(length(levels(factor(z$order))) == 1 & type!=2){
-      warning("invalid facet.var setting, the iNEXT object do not consist multiple orders.")
-    }else{
-      g <- g + facet_wrap(~order, nrow=1)
-      if(color.var=="both"){
-        g <- g + guides(colour=guide_legend(title="Guides", ncol=length(levels(factor(z$order))), byrow=TRUE),
-                        fill=guide_legend(title="Guides"))
+    if (sum(names(p) == "t") == 1) {
+      if (se == T) {
+        g <- ggplot(p,aes(x = t,y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
+        geom_ribbon(aes(ymin = qD.LCL,ymax = qD.UCL,fill = Site),linetype = 0,alpha = 0.2) +
+        geom_point(aes(shape=Site), size=5, data=out.sub) + ylab("Diversity")  + xlab("Number of sampling units") +
+        facet_wrap(~order) + theme(legend.position = "bottom",
+                                   legend.title=element_blank(),
+                                   text=element_text(size=18),
+                                   legend.key.width = unit(1.2,"cm"))
+      }
+      if (se == F) {
+        g <- ggplot(p,aes(x = t,y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
+          geom_point(aes(shape=Site), size=5, data=out.sub) + ylab("Diversity")  + xlab("Number of sampling units") +
+          facet_wrap(~order) + theme(legend.position = "bottom",
+                                     legend.title=element_blank(),
+                                     text=element_text(size=18),
+                                     legend.key.width = unit(1.2,"cm"))
       }
     }
   }
-
-  if(facet.var=="site"){
-    if(!"site"%in%names(z)) {
-      warning("invalid facet.var setting, the iNEXT object do not consist multiple sites.")
-    }else{
-      g <- g + facet_wrap(~site, nrow=1)
-      if(color.var=="both"){
-        g <- g + guides(colour=guide_legend(title="Guides", nrow=length(levels(factor(z$order)))),
-                        fill=guide_legend(title="Guides"))
-      }
+  if (type == 3) {
+    if (se == T) {
+        g <- ggplot(p,aes(x = SC, y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
+          geom_ribbon(aes(ymin = qD.LCL,ymax = qD.UCL, fill = Site),linetype = 0,alpha = 0.2) +
+          geom_point(aes(shape=Site), size=5, data=p.sub) + xlab("Sample coverage") + ylab("Diversity")
+        facet_wrap(~order) + theme(legend.position = "bottom",
+                                   legend.title=element_blank(),
+                                   text=element_text(size=18),
+                                   legend.key.width = unit(1.2,"cm"))
+    }
+    if (se == F) {
+      g <- ggplot(p,aes(x = SC, y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
+        geom_point(aes(shape=Site), size=5, data=p.sub) + xlab("Sample coverage") + ylab("Diversity")
+      facet_wrap(~order) + theme(legend.position = "bottom",
+                                 legend.title=element_blank(),
+                                 text=element_text(size=18),
+                                 legend.key.width = unit(1.2,"cm"))
     }
   }
-
-  if(facet.var=="both"){
-    if(length(levels(factor(z$order))) == 1 | !"site"%in%names(z)){
-      warning("invalid facet.var setting, the iNEXT object do not consist multiple sites or orders.")
-    }else{
-      g <- g + facet_wrap(site~order)
-      if(color.var=="both"){
-        g <- g +  guides(colour=guide_legend(title="Guides", nrow=length(levels(factor(z$site))), byrow=TRUE),
-                         fill=guide_legend(title="Guides"))
-      }
-    }
-  }
-
-  if(grey){
-    g <- g + theme_bw(base_size = 18) +
-      scale_fill_grey(start = 0, end = .4) +
-      scale_colour_grey(start = .2, end = .2) +
-      guides(linetype=guide_legend(title="Method"),
-             colour=guide_legend(title="Guides"),
-             fill=guide_legend(title="Guides"),
-             shape=guide_legend(title="Guides")) +
-      theme(legend.position="bottom",
-            legend.title=element_blank())
-  }
-  g <- g + theme(legend.box = "vertical")
-  return(g)
-
 }
-
-##########
-
-
-x <- x$iNextEst
-Site <- names(x)
-out <- c()
-for (i in 1:length(x)) {
-  temp <- x[[i]]
-  out <- rbind(out,data.frame(Site = Site[i],temp))
-}
-names(out)
-out.sub <- out[which(out$method=="observed"),]
-out$method[out$method=="observed"]="interpolated"
-out$lty <- out$lty <- factor(out$method, levels=unique(c("interpolated", "extrapolated"),
-                                                       c("interpolation", "interpolation", "extrapolation")))
-
-#### type 1
-ggplot(out,aes(x = n,y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
-  geom_ribbon(aes(ymin = qD.LCL,ymax = qD.UCL,fill = Site),linetype = 0,alpha = 0.2) +
-  geom_point(aes(shape=Site), size=5, data=out.sub) +
-  facet_wrap(~order) + theme(legend.position = "bottom",
-                             legend.title=element_blank(),
-                             text=element_text(size=18),
-                             legend.key.width = unit(1.2,"cm"))
-
-#### type 3
-ggplot(out,aes(x = SC, y = qD,color = Site))+ geom_line(aes(linetype = lty),size = 1.5) +
-  geom_ribbon(aes(ymin = qD.LCL,ymax = qD.UCL, fill = Site),linetype = 0,alpha = 0.2) +
-  geom_point(aes(shape=Site), size=5, data=out.sub) +
-  facet_wrap(~order) + theme(legend.position = "bottom",
-                             legend.title=element_blank(),
-                             text=element_text(size=18),
-                             legend.key.width = unit(1.2,"cm"))
 
