@@ -857,6 +857,7 @@ ggiNEXT_dare <- function(x, type=1, se=TRUE, facet.var="order", color.var="site"
                                  legend.key.width = unit(1.2,"cm"))
     }
   }
+  g <- g +theme(legend.box = "vertical")
   return(g)
 }
 
