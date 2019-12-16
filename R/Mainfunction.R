@@ -21,7 +21,7 @@
 #' @export
 
 
-iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
+iNEXTdare <- function(x, rho, q = 0, datatype = "abundance", size = NULL,
                        endpoint = NULL, knots = 40, se = TRUE, conf = 0.95,
                        nboot = 50) {
   datainf.abu <- function(data,rho){
@@ -431,7 +431,12 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
           da <- x[[z]]
           st <- da[1]
           sts <- ceiling(st/rho)
-          et <- sort(unique(c(round(seq(1,min(sts,2*st),length.out = knots)),st)))
+          if (is.null(size) == 1) {
+            et <- sort(unique(c(round(seq(1,min(sts,2*st),length.out = knots)),st)))
+          }
+          if (is.null(size) == 0) {
+            et <- sort(unique(c(size,st,sts)))
+          }
           sc <- round(cover.inc(da,rho,et),3)
           method <- ifelse(et<st,"interpolated",ifelse(et>st,"extrapolated","observed"))
           temp <- c()
@@ -448,7 +453,12 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
           da <- x[[z]]
           st <- da[1]
           sts <- ceiling(st/rho)
-          et <- sort(unique(c(round(seq(1,min(sts,endpoint),length.out = knots)),st)))
+          if (is.null(size) == 1) {
+            et <- sort(unique(c(round(seq(1,min(sts,2*st),length.out = knots)),st)))
+          }
+          if (is.null(size) == 0) {
+            et <- sort(unique(c(size,st,sts)))
+          }
           sc <- round(cover.inc(da,rho,et),3)
           method <- ifelse(et<st,"interpolated",ifelse(et>st,"extrapolated","observed"))
           temp <- c()
@@ -468,8 +478,13 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
           da <- x[[z]]
           st <- da[1]
           sts <- ceiling(st/rho)
-          et <- sort(unique(c(round(seq(1,min(sts,2*st),length.out = knots)),st)))
-          sc <- cover.inc(da,rho,et)
+          if (is.null(size) == 1) {
+            et <- sort(unique(c(round(seq(1,min(sts,2*st),length.out = knots)),st)))
+          }
+          if (is.null(size) == 0) {
+            et <- sort(unique(c(size,st,sts)))
+          }
+                    sc <- cover.inc(da,rho,et)
           method <- ifelse(et<st,"interpolated",ifelse(et>st,"extrapolated","observed"))
           MI <- bootstrap.inc(da,rho)
           sam <- sapply(1:nboot, function(x){
@@ -504,7 +519,12 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
           da <- x[[z]]
           st <- da[1]
           sts <- ceiling(st/rho)
-          et <- sort(unique(c(round(seq(1,min(sts,endpoint),length.out = knots)),st)))
+          if (is.null(size) == 1) {
+            et <- sort(unique(c(round(seq(1,min(sts,2*st),length.out = knots)),st)))
+          }
+          if (is.null(size) == 0) {
+            et <- sort(unique(c(size,st,sts)))
+          }
           sc <- cover.inc(da,rho,et)
           method <- ifelse(et<st,"interpolated",ifelse(et>st,"extrapolated","observed"))
           MI <- bootstrap.inc(da,rho)
@@ -583,7 +603,12 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
           da <- x[[z]]
           n <- sum(da)
           N <- ceiling(n/rho)
-          em <- sort(unique(c(round(seq(1,min(N,2*n),length.out = knots)),n)))
+          if (is.null(size) == 1) {
+            em <- sort(unique(c(round(seq(1,min(N,2*n),length.out = knots)),n)))
+          }
+          if (is.null(size) == 0) {
+            em <- sort(unique(c(size,n,N)))
+          }
           sc <- round(cover.abu(da,rho,em),3)
           method <- ifelse(em<n,"interpolated",ifelse(em>n,"extrapolated","observed"))
           temp <- c()
@@ -600,7 +625,12 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
           da <- x[[z]]
           n <- sum(da)
           N <- ceiling(n/rho)
-          em <- sort(unique(c(round(seq(1,min(N,endpoint),length.out = knots)),n)))
+          if (is.null(size) == 1) {
+            em <- sort(unique(c(round(seq(1,min(N,2*n),length.out = knots)),n)))
+          }
+          if (is.null(size) == 0) {
+            em <- sort(unique(c(size,n,N)))
+          }
           sc <- round(cover.inc(da,rho,em),3)
           method <- ifelse(em<n,"interpolated",ifelse(em>n,"extrapolated","observed"))
           temp <- c()
@@ -621,7 +651,12 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
           da <- x[[z]]
           n <- sum(da)
           N <- ceiling(n/rho)
-          em <- sort(unique(c(round(seq(1,min(N,2*n),length.out = knots)),n)))
+          if (is.null(size) == 1) {
+            em <- sort(unique(c(round(seq(1,min(N,2*n),length.out = knots)),n)))
+          }
+          if (is.null(size) == 0) {
+            em <- sort(unique(c(size,n,N)))
+          }
           sc <- cover.abu(da,rho,em)
           method <- ifelse(em<n,"interpolated",ifelse(em>n,"extrapolated","observed"))
           NI <- bootstrap.abu(da,rho)
@@ -659,7 +694,12 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance",
           da <- x[[z]]
           n <- sum(da)
           N <- ceiling(n/rho)
-          em <- sort(unique(c(round(seq(1,min(N,endpoint),length.out = knots)),n)))
+          if (is.null(size) == 1) {
+            em <- sort(unique(c(round(seq(1,min(N,2*n),length.out = knots)),n)))
+          }
+          if (is.null(size) == 0) {
+            em <- sort(unique(c(size,n,N)))
+          }
           sc <- cover.abu(da,rho,em)
           method <- ifelse(em<n,"interpolated",ifelse(em>n,"extrapolated","observed"))
           NI <- bootstrap.abu(da,rho)
