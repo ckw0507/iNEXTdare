@@ -412,11 +412,11 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance", size = NULL,
   }
   CI <- round(qnorm(0.5+conf/2),3)
   if(class(x)=="data.frame" | class(x)=="matrix" ){
-    x <- as.list(x)
+    x <- as.data.frame(x)
   } else if (class(x) == "list") {
     x <- x
   } else {
-    ""
+    print("Data must be a matrix, data.frame or list of species abundances or incidence frequencies.")
   }
 
   if (datatype == "incidence_freq") {
