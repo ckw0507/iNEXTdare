@@ -569,9 +569,9 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance", size = NULL,
     for (i in 1:length(x)) {
       da <- x[[i]]
       ob <- da[-1];ob <- ob[ob>0];st <- da[1]
-      temp <- matrix(0,3,7)
+      temp <- matrix(0,3,8)
       temp <- as.data.frame(temp)
-      colnames(temp) <- c("Site","Diversity","Observed","Estimator","s.e.","LCL","UCL")
+      colnames(temp) <- c("Site","Diversity","Observed","Estimator","s.e.","LCL","UCL","Order")
       temp[,1] <- Site[i]
       temp[,2] <- c("Species richness","Shannon diversity","Simpson diversity")
       temp[,3] <- round(c(sum(ob != 0),exp(-sum(ob/sum(ob)*log(ob/sum(ob)))),sum((ob/sum(ob))^2)^(-1)),3)
@@ -587,6 +587,7 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance", size = NULL,
       temp[,5] <- round(c(sd(se[1,]),sd(se[2,]),sd(se[3,])),3)
       temp[,6] <- temp[,4] - CI*temp[,5]
       temp[,7] <- temp[,4] + CI*temp[,5]
+      temp[,8] <- 0:2
       asy <- rbind(asy,temp)
     }
 
@@ -748,9 +749,9 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance", size = NULL,
       da <- x[[i]]
       da <- da[da>0]
       n <- sum(sapply(unique(da), function(x){ x* sum(da == x)}))
-      temp <- matrix(0,3,7)
+      temp <- matrix(0,3,8)
       temp <- as.data.frame(temp)
-      colnames(temp) <- c("Site","Diversity","Observed","Estimator","s.e.","LCL","UCL")
+      colnames(temp) <- c("Site","Diversity","Observed","Estimator","s.e.","LCL","UCL","Order")
       temp[,1] <- Site[i]
       temp[,2] <- c("Species richness","Shannon diversity","Simpson diversity")
       temp[,3] <- round(c(sum(da != 0),exp(-sum(da/sum(da)*log(da/sum(da)))),sum((da/sum(da))^2)^(-1)),3)
@@ -766,6 +767,7 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance", size = NULL,
       temp[,5] <- round(c(sd(se[1,]),sd(se[2,]),sd(se[3,])),3)
       temp[,6] <- temp[,4] - CI*temp[,5]
       temp[,7] <- temp[,4] + CI*temp[,5]
+      temp[,8] <- 0:2
       asy <- rbind(asy,temp)
     }
 
