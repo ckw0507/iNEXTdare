@@ -413,7 +413,12 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance", size = NULL,
   CI <- round(qnorm(0.5+conf/2),3)
   if(class(x)=="data.frame" | class(x)=="matrix" ){
     x <- as.list(x)
+  } else if (class(x) == "list") {
+    x <- x
+  } else {
+    ""
   }
+
   if (datatype == "incidence_freq") {
     if (is.null(names(x)) == 1) {
       names(x) <- paste("Site",1:length(x),sep = ".")

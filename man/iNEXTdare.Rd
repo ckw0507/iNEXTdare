@@ -10,6 +10,7 @@ iNEXTdare(
   rho,
   q = 0,
   datatype = "abundance",
+  size = NULL,
   endpoint = NULL,
   knots = 40,
   se = TRUE,
@@ -28,6 +29,9 @@ the species in each element must exactly match including specpes order. Use \cod
 \item{datatype}{data type of input data: individual-based abundance data (datatype = "abundance"),
 sampling-unit-based incidence frequencies data (datatype = "incidence_freq")}
 
+\item{size}{an integer vector of sample sizes (number of individuals or sampling units) for which diversity estimates will be computed.
+If NULL, then diversity estimates will be computed for those sample sizes determined by the specified/default endpoint and knots.}
+
 \item{endpoint}{an integer specifying the sample size that is the endpoint for rarefaction/extrapolation.
 If NULL, then endpoint = double reference sample size.}
 
@@ -39,9 +43,6 @@ each knot represents a particular sample size for which diversity estimate will 
 \item{conf}{a positive number < 1 specifying the level of confidence interval, default is 0.95.}
 
 \item{nboot}{an integer specifying the number of replications.}
-
-\item{size}{an integer vector of sample sizes (number of individuals or sampling units) for which diversity estimates will be computed.
-If NULL, then diversity estimates will be computed for those sample sizes determined by the specified/default endpoint and knots.}
 }
 \description{
 Main Functions

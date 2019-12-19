@@ -2,3 +2,4 @@
 
 export(ggiNEXT_dare)
 export(iNEXTdare)
+import(ggplot2)
