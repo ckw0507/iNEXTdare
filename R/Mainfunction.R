@@ -808,6 +808,7 @@ iNEXTdare <- function(x, rho, q = 0, datatype = "abundance", size = NULL,
 #' ggiNEXT(z, facet.var="site", color.var="order")
 #' ggiNEXT(z, facet.var="both", color.var="both")
 #'}
+#' @import ggplot2
 #' @export
 #'
 
